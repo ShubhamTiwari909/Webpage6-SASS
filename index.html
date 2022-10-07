@@ -15,7 +15,7 @@
     <header id="header">
       <div class="container navigation">
         <div class="dropdownNavigation" id="dropdownNavigation">
-          <a href="javascript:void(0)" class="text-white text-lg logo" id="logo"
+          <a href="javascript:void(0)" class="text-white logo" id="logo"
             >autocrypo</a
           >
           <button
@@ -23,7 +23,7 @@
             id="hamburger"
             onclick="dropdownNavigation();"
           >
-            <i class="fa-sharp fa-solid fa-bars"></i>
+            <i class="fa-sharp fa-solid fa-bars" id="nav-icon"></i>
           </button>
         </div>
 
@@ -32,7 +32,7 @@
             <li>
               <a
                 href="javascript:void(0)"
-                class="text-sm text-white nav-link"
+                class="text-white nav-link"
                 onclick="dropdownNavigation();"
                 >Benefits</a
               >
@@ -40,7 +40,7 @@
             <li>
               <a
                 href="javascript:void(0)"
-                class="text-sm text-white nav-link"
+                class="text-white nav-link"
                 onclick="dropdownNavigation();"
                 >Pricing</a
               >
@@ -48,7 +48,7 @@
             <li>
               <a
                 href="javascript:void(0)"
-                class="text-sm text-white nav-link"
+                class="text-white nav-link"
                 onclick="dropdownNavigation();"
                 >Testimonials</a
               >
@@ -56,7 +56,7 @@
             <li>
               <a
                 href="javascript:void(0)"
-                class="text-sm text-white nav-link"
+                class="text-white nav-link"
                 onclick="dropdownNavigation();"
                 >Clients</a
               >
@@ -66,7 +66,7 @@
         <div class="nav-buttons" id="nav-buttons">
           <a
             href="javascript:void(0)"
-            class="text-sm text-white btn-sm nav-link login"
+            class="text-white btn-sm nav-link login"
             onclick="dropdownNavigation();"
             >Login</a
           >
@@ -99,7 +99,10 @@
               >Get Started</a
             >
           </div>
-          <img src="https://dl.dropboxusercontent.com/s/r71xe9030gt16eb/artboard.png?dl=0" class="banner-image" />
+          <img
+            src="https://dl.dropboxusercontent.com/s/r71xe9030gt16eb/artboard.png?dl=0"
+            class="banner-image"
+          />
         </div>
       </section>
 
@@ -107,7 +110,11 @@
       <section class="container bg-white benefits-section">
         <div class="boxes">
           <div class="box">
-            <div class="box-img-container"><img src="https://dl.dropboxusercontent.com/s/knaiua8ikrcqs1x/shape.png?dl=0" /></div>
+            <div class="box-img-container">
+              <img
+                src="https://dl.dropboxusercontent.com/s/knaiua8ikrcqs1x/shape.png?dl=0"
+              />
+            </div>
             <h4 class="text-lg text-marine box-title">
               Secure Every Transaction
             </h4>
@@ -118,7 +125,11 @@
             </p>
           </div>
           <div class="box">
-            <div class="box-img-container"><img src="https://dl.dropboxusercontent.com/s/fyabdp4p9tic9yq/shape1.png?dl=0" /></div>
+            <div class="box-img-container">
+              <img
+                src="https://dl.dropboxusercontent.com/s/fyabdp4p9tic9yq/shape1.png?dl=0"
+              />
+            </div>
             <h4 class="text-lg text-marine box-title">Easiest To Use</h4>
             <hr class="box-h-line bg-green" />
             <p class="text-slateblue text-sm line-height-2 box-text">
@@ -127,7 +138,11 @@
             </p>
           </div>
           <div class="box">
-            <div class="box-img-container"><img src="https://dl.dropboxusercontent.com/s/07vy23js1euvmvx/shape2.png?dl=0" /></div>
+            <div class="box-img-container">
+              <img
+                src="https://dl.dropboxusercontent.com/s/07vy23js1euvmvx/shape2.png?dl=0"
+              />
+            </div>
             <h4 class="text-lg text-marine box-title">Fastest Mining</h4>
             <hr class="box-h-line bg-green" />
             <p class="text-slateblue text-sm line-height-2 box-text">
@@ -141,15 +156,22 @@
       <!-- Pricing -->
       <section class="container pricing">
         <h2 class="heading-2 text-darkpurple font-bold line-h-2 text-center">
-          Paid plan starts with a 7-day free trial,<br /> No credit card required
+          Paid plan starts with a 7-day free trial,<br />
+          No credit card required
         </h2>
         <div class="time-selection">
           <p class="text-green text-sm font-bold bg-white monthly">MONTHLY</p>
-          <p class="text-green text-sm font-bold yearly">YEARLY - 2 MONTH FREE</p>
+          <p class="text-green text-sm font-bold yearly">
+            YEARLY - 2 MONTH FREE
+          </p>
         </div>
         <div class="cards">
           <!-- first pricing card -->
-          <div class="card">
+          <div
+            class="card"
+            onmouseover="handleMouseIn(0)"
+            onmouseout="handleMouseOut()"
+          >
             <h3
               class="title-2 text-darkpurple font-bold text-center card-title"
             >
@@ -178,7 +200,11 @@
           </div>
 
           <!-- second pricing card -->
-          <div class="card">
+          <div
+            class="card"
+            onmouseover="handleMouseIn(1)"
+            onmouseout="handleMouseOut()"
+          >
             <h3
               class="title-2 text-darkpurple font-bold text-center card-title"
             >
@@ -208,7 +234,11 @@
           </div>
 
           <!-- third pricing card-->
-          <div class="card">
+          <div
+            class="card"
+            onmouseover="handleMouseIn(2)"
+            onmouseout="handleMouseOut()"
+          >
             <h3
               class="title-2 text-darkpurple font-bold text-center card-title"
             >
@@ -254,9 +284,11 @@
           </h2>
         </div>
         <div class="review-right bg-darkgreyblue">
-          <div class="review-cards">
+          <div class="review-cards" id="review-cards">
             <div class="review-card bg-green">
-              <img src="https://dl.dropboxusercontent.com/s/jrvy4nec2hyxtgh/group-6.png?dl=0" />
+              <img
+                src="https://dl.dropboxusercontent.com/s/jrvy4nec2hyxtgh/group-6.png?dl=0"
+              />
               <p class="text-lg text-white review-card-text">
                 "I started driving with Uber because I liked the idea that my
                 own car could make me money. After just about a couple weeks, I
@@ -267,7 +299,9 @@
               </p>
             </div>
             <div class="review-card bg-white">
-              <img src="https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0" />
+              <img
+                src="https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0"
+              />
               <p class="text-lg text-slateblue review-card-text">
                 "I wanted something where I could meet new people and get out of
                 the house. Uber has helped with both of those things, plus I’m
@@ -278,7 +312,35 @@
               </p>
             </div>
             <div class="review-card bg-white">
-              <img src="https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0" />
+              <img
+                src="https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0"
+              />
+              <p class="text-lg text-slateblue review-card-text">
+                "I wanted something where I could meet new people and get out of
+                the house. Uber has helped with both of those things, plus I’m
+                seeing new parts of the city I’ve never seen before!"
+              </p>
+              <p class="text-lg text-marine font-bold review-card-user">
+                Jenny Harra / <span class="text-marine">OWW Studio</span>
+              </p>
+            </div>
+            <div class="review-card bg-white">
+              <img
+                src="https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0"
+              />
+              <p class="text-lg text-slateblue review-card-text">
+                "I wanted something where I could meet new people and get out of
+                the house. Uber has helped with both of those things, plus I’m
+                seeing new parts of the city I’ve never seen before!"
+              </p>
+              <p class="text-lg text-marine font-bold review-card-user">
+                Sean Walker / <span class="text-marine">OWW Studio</span>
+              </p>
+            </div>
+            <div class="review-card bg-white">
+              <img
+                src="https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0"
+              />
               <p class="text-lg text-slateblue review-card-text">
                 "I wanted something where I could meet new people and get out of
                 the house. Uber has helped with both of those things, plus I’m
@@ -290,11 +352,15 @@
             </div>
           </div>
           <div class="dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <a href="javascript:void(0)" onclick="prevComment();" class="dot"
+              ><i class="fa-solid fa-chevron-left"></i
+            ></a>
+            <a href="javascript:void(0)" onclick="nextComment();" class="dot"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></a>
+            <!-- <a href="javascript:void(0)" onclick="nextComment(3);" class="dot"></a>
+            <a href="javascript:void(0)" onclick="nextComment(4);" class="dot"></a>
+            <a href="javascript:void(0)" onclick="nextComment(5);" class="dot"></a> -->
           </div>
         </div>
       </section>
@@ -304,21 +370,41 @@
         WORKS WITH ANY PLATFORM
       </p>
       <div class="brand-logos">
-        <img src="https://dl.dropboxusercontent.com/s/wx3qn13217uru3a/group-20.png?dl=0" />
-        <img src="https://dl.dropboxusercontent.com/s/ba5p8xf3cngycbp/group-19.png?dl=0" />
-        <img src="https://dl.dropboxusercontent.com/s/dqtqquqh4ha4gq7/group-17.png?dl=0" />
-        <img src="https://dl.dropboxusercontent.com/s/5e6uvmwxmh3igfr/group-18.png?dl=0" />
-        <img src="https://dl.dropboxusercontent.com/s/83u8bbftbxw9p85/group-15.png?dl=0" />
-        <img src="https://dl.dropboxusercontent.com/s/mmaq1ma4bpriwb2/group-8.png?dl=0" />
+        <img
+          src="https://dl.dropboxusercontent.com/s/wx3qn13217uru3a/group-20.png?dl=0"
+        />
+        <img
+          src="https://dl.dropboxusercontent.com/s/ba5p8xf3cngycbp/group-19.png?dl=0"
+        />
+        <img
+          src="https://dl.dropboxusercontent.com/s/dqtqquqh4ha4gq7/group-17.png?dl=0"
+        />
+        <img
+          src="https://dl.dropboxusercontent.com/s/5e6uvmwxmh3igfr/group-18.png?dl=0"
+        />
+        <img
+          src="https://dl.dropboxusercontent.com/s/83u8bbftbxw9p85/group-15.png?dl=0"
+        />
+        <img
+          src="https://dl.dropboxusercontent.com/s/mmaq1ma4bpriwb2/group-8.png?dl=0"
+        />
       </div>
       <p class="text-slateblue text-sm line-h-2 text-center copyright">
         © 2018 autocryp All Right Reserved
       </p>
       <div class="footer-nav text-sm">
-        <a href="javascript:void(0)" class="text-slateblue line-height-2">Benefit</a>
-        <a href="javascript:void(0)" class="text-slateblue line-height-2">Pricing</a>
-        <a href="javascript:void(0)" class="text-slateblue line-height-2">Testimonials</a>
-        <a href="javascript:void(0)" class="text-slateblue line-height-2">Clients</a>
+        <a href="javascript:void(0)" class="text-slateblue line-height-2"
+          >Benefit</a
+        >
+        <a href="javascript:void(0)" class="text-slateblue line-height-2"
+          >Pricing</a
+        >
+        <a href="javascript:void(0)" class="text-slateblue line-height-2"
+          >Testimonials</a
+        >
+        <a href="javascript:void(0)" class="text-slateblue line-height-2"
+          >Clients</a
+        >
       </div>
     </footer>
   </body>

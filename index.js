@@ -3,8 +3,64 @@ const navigation = document.getElementById("navbar");
 const navButtons = document.getElementById("nav-buttons");
 const logo = document.getElementById("logo");
 const hamburger = document.getElementById("hamburger");
+const navIcon = document.getElementById("nav-icon");
 const elements = document.getElementsByClassName('nav-link');
 const bodyElement = document.getElementById('body');
+const pricingCard = document.getElementsByClassName("card");
+const comment = document.querySelectorAll(".review-card");
+
+
+let counter = 0;
+
+comment.forEach((element, index) => {
+    element.style.left = `${index * 110}%`
+});
+
+
+const prevComment = () => {
+    counter--;
+    slideCard();
+}
+
+const nextComment = () => {
+    counter++;
+    slideCard();
+}
+
+const slideCard = () => {
+    comment.forEach(element => {
+        element.style.transform = `translateX(-${counter * 112}%)`
+    });
+}
+
+
+const handleMouseIn = value => {
+    for (let i = 0; i < pricingCard.length; i++) {
+        if (i === value) {
+            pricingCard[i].style.backgroundColor = "#fff";
+            pricingCard[i].style.borderTop = "3px solid #0a8aff";
+            pricingCard[i].style.boxShadow = "0 7px 24px 0 rgba(83, 83, 83, 0.1)";
+        }
+        else {
+            pricingCard[i].style.backgroundColor = "transparent";
+            pricingCard[i].style.borderTop = "none";
+            pricingCard[i].style.boxShadow = "0 0 0 0 rgba(83, 83, 83, 0.1)";
+        }
+    }
+};
+
+const handleMouseOut = () => {
+    for (let i = 0; i < pricingCard.length; i++) {
+        pricingCard[i].style.backgroundColor = "transparent";
+        pricingCard[i].style.borderTop = "none";
+        pricingCard[i].style.boxShadow = "0 0 0 0 rgba(83, 83, 83, 0.1)";
+    }
+    scrolledNavigation();
+}
+
+
+
+
 
 
 
@@ -13,12 +69,16 @@ const dropdownNavigation = () => {
         header.style.height = "102vh";
         header.style.backgroundColor = "white";
         header.style.top = "0";
+        header.style.padding = "20px 0 0 0"
 
         navigation.style.display = "flex";
         navButtons.style.display = "flex";
 
         logo.style.color = "black";
         hamburger.style.color = "black";
+        navIcon.classList.remove("fa-bars");
+        navIcon.classList.add("fa-x");
+
 
         bodyElement.style.height = "100%";
         bodyElement.style.overflowY = "hidden";
@@ -37,6 +97,8 @@ const dropdownNavigation = () => {
 
         logo.style.color = "white";
         hamburger.style.color = "white";
+        navIcon.classList.add("fa-bars");
+        navIcon.classList.remove("fa-x");
 
         bodyElement.style.overflowY = "auto";
 
@@ -79,7 +141,7 @@ function changingMediaQuery() {
     scrolledNavigation();
 }
 
-window.addEventListener('resize', changingMediaQuery);
+window.addEventListener('resize', changingMediaQuery, nextComment, prevComment);
 
 let scrolledNavigation = () => {
     "use strict";
