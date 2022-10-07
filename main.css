@@ -410,6 +410,7 @@ header {
 /* Footer */
 .footer {
     margin-top: 200px;
+    padding: 0 0 110px;
 }
 
 .brand-logos {
