@@ -378,7 +378,7 @@ nav {
     gap: 40px;
     position: absolute;
     top: 200px;
-    left: -100px
+    left:-100px
 }
 
 .review-card {
@@ -407,12 +407,11 @@ nav {
 }
 
 .dot {
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     border: 3px solid white;
     border-radius: 50%;
 }
-
 
 
 
@@ -664,11 +663,11 @@ nav {
         position: relative;
         top: 0;
         left: 0;
-        padding: 0 30px;
+        padding:0 30px;
     }
 
     .review-card {
-        min-width: 250px;
+        width: 300px;
         padding: 40px 30px 35px 30px;
     }
 
@@ -676,16 +675,14 @@ nav {
         position: static;
         display: flex;
         justify-content: center;
-        margin-top: 40px;
     }
 
     .dot {
-        width: 15px;
-        height: 15px;
+        min-width: 15px;
+        height: 30px;
         border: 3px solid black;
         border-radius: 50%;
     }
-
 
 
     /* Footer */
