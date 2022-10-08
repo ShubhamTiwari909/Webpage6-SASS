@@ -7,32 +7,40 @@ const navIcon = document.getElementById("nav-icon");
 const elements = document.getElementsByClassName('nav-link');
 const bodyElement = document.getElementById('body');
 const pricingCard = document.getElementsByClassName("card");
-const comment = document.querySelectorAll(".review-card");
+const cards = document.querySelectorAll(".review-card");
+const cardText = document.querySelectorAll('.review-card-text')
+const cardUserText = document.querySelectorAll('.review-card-user');
+const cardLogo = document.querySelectorAll('.review-card-logo');
+const dots = document.querySelectorAll('.dot');
 
 
-let counter = 0;
+const slider = (count) => {
+    for (let index = 0; index < cards.length; index++) {
+        if (index === count) {
+            cards[index].style.backgroundColor = "#1fdb84";
+            cards[index].style.color = "white";
+            cardText[index].style.color = "white";
+            cardUserText[index].style.color = "white";
+            cardLogo[index].src = "https://dl.dropboxusercontent.com/s/jrvy4nec2hyxtgh/group-6.png?dl=0"
+            dots[index].style.backgroundColor = "#1fdb84"
+        }
+        else {
+            cards[index].style.backgroundColor = "white";
+            cardUserText[index].style.color = "#031d5b";
+            cardText[index].style.color = "#5b6c94";
+            cardLogo[index].src = "https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0"
+            dots[index].style.backgroundColor = "transparent"
 
-comment.forEach((element, index) => {
-    element.style.left = `${index * 110}%`
-});
+        }
+        if (window.innerWidth >= 300) {
+            cards[index].style.transform = `translateX(-${count * 290}px)`;
+        }
+        if (window.innerWidth >= 800) {
+            cards[index].style.transform = `translateX(-${count * 400}px)`;
+        }
 
-
-const prevComment = () => {
-    counter--;
-    slideCard();
+    }
 }
-
-const nextComment = () => {
-    counter++;
-    slideCard();
-}
-
-const slideCard = () => {
-    comment.forEach(element => {
-        element.style.transform = `translateX(-${counter * 112}%)`
-    });
-}
-
 
 const handleMouseIn = value => {
     for (let i = 0; i < pricingCard.length; i++) {
@@ -141,21 +149,21 @@ function changingMediaQuery() {
     scrolledNavigation();
 }
 
-window.addEventListener('resize', changingMediaQuery, nextComment, prevComment);
+window.addEventListener('resize', changingMediaQuery, slider);
 
 let scrolledNavigation = () => {
     "use strict";
     if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
-        header.style.height = "60px"
-        header.style.top = "0"
-        header.style.padding = "20px 0 0"
-        header.style.backgroundColor = "black";
+        header.style.height = "50px";
+        header.style.top = "0";
+        header.style.padding = "20px 0 0";
+        header.style.backgroundColor = "#1fdb84";
     }
     else {
-        header.style.height = "100px"
+        header.style.height = "100px";
         header.style.backgroundColor = "transparent";
-        header.style.top = "40px"
-        header.style.padding = "0"
+        header.style.top = "40px";
+        header.style.padding = "0";
     }
 };
 

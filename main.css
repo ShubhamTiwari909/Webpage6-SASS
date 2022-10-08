@@ -378,7 +378,7 @@ nav {
     gap: 40px;
     position: absolute;
     top: 200px;
-    left:-100px
+    left: -100px
 }
 
 .review-card {
@@ -407,9 +407,12 @@ nav {
 }
 
 .dot {
-    color: white;
-    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
 }
+
 
 
 
@@ -473,7 +476,7 @@ nav {
 
     .hamburger {
         display: block;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .dropdownNavigation {
@@ -482,7 +485,7 @@ nav {
     }
 
     .logo {
-        font-size: 30px;
+        font-size: 25px;
     }
 
 
@@ -661,11 +664,11 @@ nav {
         position: relative;
         top: 0;
         left: 0;
-        padding:0 30px;
+        padding: 0 30px;
     }
 
     .review-card {
-        width: 300px;
+        min-width: 250px;
         padding: 40px 30px 35px 30px;
     }
 
@@ -673,12 +676,16 @@ nav {
         position: static;
         display: flex;
         justify-content: center;
+        margin-top: 40px;
     }
 
     .dot {
-        color: black;
-        font-size: 30px;
+        width: 15px;
+        height: 15px;
+        border: 3px solid black;
+        border-radius: 50%;
     }
+
 
 
     /* Footer */
