@@ -33,13 +33,18 @@ const slider = (count) => {
 
         }
         if (window.innerWidth >= 300) {
-            cards[index].style.transform = `translateX(-${count * 290}px)`;
+            cards[index].style.left = `-${count * 350}px`;
         }
         if (window.innerWidth >= 800) {
-            cards[index].style.transform = `translateX(-${count * 400}px)`;
+            cards[index].style.left = `-${count * 400}px`;
         }
-
+        if (window.innerWidth >= 801 && window.innerWidth < 1000) {
+            cards[index].style.left = `-${count * 300}px`;
+        }
     }
+    cards.forEach((element,index) => {
+        element.style.transform = `translateX(${index * 10}px)`
+    });
 }
 
 const handleMouseIn = value => {

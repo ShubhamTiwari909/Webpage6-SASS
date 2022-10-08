@@ -387,6 +387,7 @@ nav {
     padding: 80px 60px 65px 50px;
     border-radius: 5px;
     width: 400px;
+    position: relative;
 }
 
 .review-card-text {
