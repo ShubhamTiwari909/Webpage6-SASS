@@ -108,14 +108,16 @@ const slider = (count) => {
             cardText[index].style.color = "white";
             cardUserText[index].style.color = "white";
             cardLogo[index].src = "https://dl.dropboxusercontent.com/s/jrvy4nec2hyxtgh/group-6.png?dl=0"
-            dots[index].style.backgroundColor = "#1fdb84"
+            dots[index].style.backgroundColor = "#1fdb84";
+            dots[index].style.borderColor = "#1fdb84"
         }
         else {
             cards[index].style.backgroundColor = "white";
             cardUserText[index].style.color = "#031d5b";
             cardText[index].style.color = "#5b6c94";
             cardLogo[index].src = "https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0"
-            dots[index].style.backgroundColor = "transparent"
+            dots[index].style.backgroundColor = "transparent";
+            dots[index].style.borderColor = "black"
 
         }
         if (window.innerWidth >= 300) {
@@ -128,13 +130,24 @@ const slider = (count) => {
             cards[index].style.left = `-${count * 300}px`;
         }
     }
-    cards.forEach((element,index) => {
+    cards.forEach((element, index) => {
         element.style.transform = `translateX(${index * 10}px)`
     });
 }
 
 
 
+
+// Default styling for
+const defaultStyling = () => {
+    cards[0].style.backgroundColor = "#1fdb84";
+    cards[0].style.color = "white";
+    cardText[0].style.color = "white";
+    cardUserText[0].style.color = "white";
+    cardLogo[0].src = "https://dl.dropboxusercontent.com/s/jrvy4nec2hyxtgh/group-6.png?dl=0"
+    dots[0].style.backgroundColor = "#1fdb84"
+    dots[0].style.borderColor = "#1fdb84"
+}
 
 
 
