@@ -109,7 +109,6 @@ const slider = (count) => {
             cardUserText[index].style.color = "white";
             cardLogo[index].src = "https://dl.dropboxusercontent.com/s/jrvy4nec2hyxtgh/group-6.png?dl=0"
             dots[index].style.backgroundColor = "#1fdb84";
-            dots[index].style.borderColor = "#1fdb84"
         }
         else {
             cards[index].style.backgroundColor = "white";
@@ -117,7 +116,6 @@ const slider = (count) => {
             cardText[index].style.color = "#5b6c94";
             cardLogo[index].src = "https://dl.dropboxusercontent.com/s/4mw6ondhuf2mv0s/group-7.png?dl=0"
             dots[index].style.backgroundColor = "transparent";
-            dots[index].style.borderColor = "black"
 
         }
         if (window.innerWidth >= 300) {
@@ -146,7 +144,6 @@ const defaultStyling = () => {
     cardUserText[0].style.color = "white";
     cardLogo[0].src = "https://dl.dropboxusercontent.com/s/jrvy4nec2hyxtgh/group-6.png?dl=0"
     dots[0].style.backgroundColor = "#1fdb84"
-    dots[0].style.borderColor = "#1fdb84"
 }
 
 
