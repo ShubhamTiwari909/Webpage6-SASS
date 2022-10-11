@@ -75,13 +75,13 @@ const handleMouseIn = value => {
     for (let i = 0; i < pricingCard.length; i++) {
         if (i === value) {
             pricingCard[i].style.backgroundColor = "#fff";
-            pricingCard[i].style.borderTop = "3px solid #0a8aff";
             pricingCard[i].style.boxShadow = "0 7px 24px 0 rgba(83, 83, 83, 0.1)";
+            pricingCard[i].style.transition= "all 0.1s ease-in";
         }
         else {
             pricingCard[i].style.backgroundColor = "transparent";
-            pricingCard[i].style.borderTop = "none";
             pricingCard[i].style.boxShadow = "0 0 0 0 rgba(83, 83, 83, 0.1)";
+            pricingCard[i].style.transition= "all 0.1s ease-in";
         }
     }
 };
@@ -102,6 +102,7 @@ const handleMouseOut = () => {
 // Carousel slider function
 const slider = (count) => {
     for (let index = 0; index < cards.length; index++) {
+        
         if (index === count) {
             cards[index].style.backgroundColor = "#1fdb84";
             cards[index].style.color = "white";
