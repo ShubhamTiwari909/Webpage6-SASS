@@ -3,18 +3,18 @@
   margin-top: 200px;
   padding: 0 0 110px;
 
-  .brand-logos {
+  &-brand-logos {
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
-  .copyright {
+  &-copyright {
     margin-top: 180px;
   }
 
-  .footer-nav {
+  &-nav {
     margin-top: 50px;
     display: flex;
     justify-content: center;

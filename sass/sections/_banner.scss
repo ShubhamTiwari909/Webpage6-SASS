@@ -1,27 +1,26 @@
 /* banner */
-.banner-section {
+.banner {
   padding-top: 130px;
 
-  .banner {
+  &-wrapper {
     display: flex;
     gap: 100px;
+  }
+  &-text {
+    margin-top: 90px;
+    max-width: 550px;
 
-    .banner-text {
-      margin-top: 90px;
+    &-paragraph {
+      margin-top: 40px;
       max-width: 550px;
-
-      .banner-paragraph {
-        margin-top: 40px;
-        max-width: 550px;
-      }
-      .banner-button {
-        margin-top: 60px;
-      }
     }
-
-    .banner-image {
-      width: 500px;
-      max-width: 500px;
+    &-button {
+      margin-top: 60px;
     }
+  }
+
+  &-image {
+    width: 500px;
+    max-width: 500px;
   }
 }

@@ -1,35 +1,35 @@
-header {
+.header {
   position: fixed;
   top: 40px;
   width: 100%;
   z-index: 10;
 
-  .navigation {
+  &-navigation {
     display: flex;
     justify-content: space-between;
-    .dropdownNavigation {
-      .logo {
-        font-family: var(--Rubik);
-        font-size: 18px;
-      }
-      .hamburger {
-        background-color: transparent;
-        border: none;
-        display: none;
-        color: white;
-      }
-    }
-    nav {
-      padding: 6px 0 0 0;
-      .navbar {
-        display: flex;
-        gap: 35px;
-      }
-    }
-    .nav-buttons {
-      display: flex;
-      gap: 35px;
-    }
+  }
+
+
+  &-logo {
+    font-family: var(--Rubik);
+    font-size: 18px;
+  }
+  &-hamburger {
+    background-color: transparent;
+    border: none;
+    display: none;
+    color: white;
+  }
+  &-nav {
+    padding: 6px 0 0 0;
+  }
+  &-navbar {
+    display: flex;
+    gap: 35px;
+  }
+  &-nav-buttons {
+    display: flex;
+    gap: 35px;
   }
 }
 

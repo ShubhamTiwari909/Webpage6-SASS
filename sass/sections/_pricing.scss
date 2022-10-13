@@ -2,39 +2,21 @@
 .pricing {
   margin-top: 200px;
 
-  .time-selection {
+  &-time-selection {
     margin-top: 60px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-    .monthly,
-    .yearly {
-      text-align: center;
-      padding: 20px 35px;
-      border: solid 1px #aefdd9;
-    }
-
-    .monthly {
-      border-radius: 5px 0 0 5px;
-    }
-
-    .yearly {
-      border-left: none;
-      border-radius: 0 5px 5px 0;
-      opacity: 0.7;
-      background-color: #d1fce9;
-    }
   }
-}
 
-.cards {
-  margin-top: 65px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 
-  .card {
+  &-cards-wrapper {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &-card {
     height: 650px;
     display: flex;
     flex-direction: column;
@@ -44,11 +26,11 @@
     transition: all 0.1s ease-in;
     position: relative;
 
-    .card-text:nth-child(1) {
+    &-text:nth-child(1) {
       margin-top: 30px;
     }
 
-    .pricing-benefit {
+    &-benefits {
       height: 300px;
 
       p {
@@ -78,3 +60,23 @@
     }
   }
 }
+
+.monthly,
+.yearly {
+  text-align: center;
+  padding: 20px 35px;
+  border: solid 1px #aefdd9;
+}
+
+.monthly {
+  border-radius: 5px 0 0 5px;
+}
+
+.yearly {
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  opacity: 0.7;
+  background-color: #d1fce9;
+}
+
+

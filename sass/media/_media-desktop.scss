@@ -23,53 +23,42 @@
   @include buttons(15px 30px 15px, 10px 0, lg);
 
   /* Header */
-  header {
-    .nav-buttons {
-      .register {
-        padding: 10px 40px;
+  .register {
+    padding: 10px 40px;
+  }
+  /* Banner */
+  .banner {
+    &-text {
+      &-paragraph {
+        margin-top: 20px;
+        max-width: 300px;
+      }
+      &-button {
+        margin-top: 30px;
       }
     }
-  }
 
-  /* Banner */
-  .banner-section {
-    .banner {
-      .banner-text {
-        .banner-paragraph {
-          margin-top: 20px;
-          max-width: 300px;
-        }
-        .banner-button {
-          margin-top: 30px;
-        }
-      }
-
-      .banner-image {
-        width: 350px;
-        aspect-ratio: 1/1.5;
-      }
+    &-image {
+      width: 350px;
+      aspect-ratio: 1/1.5;
     }
   }
 
   /* Benefits */
-  .benefits-section {
+  .benefits {
     position: static;
     box-shadow: 0 0 0 0 rgba(210, 210, 210, 0.5);
     border-radius: 10px;
 
-    .boxes {
-      .box {
-        margin: 30px 0;
-      }
+    &-card {
+      margin: 30px 0;
     }
   }
 
   /* Pricing */
   .pricing {
-    .cards {
-      .card {
-        height: 480px;
-      }
+    &-card {
+      height: 480px;
     }
   }
 
@@ -83,53 +72,49 @@
     padding: 0;
     margin-top: 100px;
 
-    .review-left {
+    &-left {
       background: transparent;
       height: 50px;
 
-      .review-left h2 {
+      h2 {
         font-size: 30px;
       }
     }
 
-    .review-right {
+    &-right {
       width: 100%;
       height: 100%;
       padding: 30px 0;
       background-color: transparent;
-
-      .review-cards {
-        display: flex;
-        gap: 40px;
-        position: relative;
-        top: 0;
-        left: 0;
-        padding: 0 30px;
-
-        .review-card {
-          width: 300px;
-          padding: 40px 30px 35px 30px;
-        }
-      }
-
-      .dots {
-        position: static;
-        display: flex;
-        justify-content: center;
-
-        .dot {
-          min-width: 20px;
-          height: 20px;
-          border: 3px solid black;
-          border-radius: 50%;
-        }
-      }
+    }
+    &-cards-wrapper {
+      display: flex;
+      gap: 40px;
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 0 30px;
+    }
+    &-card {
+      width: 300px;
+      padding: 40px 30px 35px 30px;
+    }
+    .dots-wrapper {
+      position: static;
+      display: flex;
+      justify-content: center;
+    }
+    .dot {
+      min-width: 20px;
+      height: 20px;
+      border: 3px solid black;
+      border-radius: 50%;
     }
   }
 
   /* Footer */
   .footer {
-    .brand-logos {
+    &-brand-logos {
       flex-direction: column;
       gap: 60px;
 

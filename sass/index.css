@@ -155,34 +155,34 @@ a {
   max-width: 1300px;
 }
 
-header {
+.header {
   position: fixed;
   top: 40px;
   width: 100%;
   z-index: 10;
 }
-header .navigation {
+.header-navigation {
   display: flex;
   justify-content: space-between;
 }
-header .navigation .dropdownNavigation .logo {
+.header-logo {
   font-family: var(--Rubik);
   font-size: 18px;
 }
-header .navigation .dropdownNavigation .hamburger {
+.header-hamburger {
   background-color: transparent;
   border: none;
   display: none;
   color: white;
 }
-header .navigation nav {
+.header-nav {
   padding: 6px 0 0 0;
 }
-header .navigation nav .navbar {
+.header-navbar {
   display: flex;
   gap: 35px;
 }
-header .navigation .nav-buttons {
+.header-nav-buttons {
   display: flex;
   gap: 35px;
 }
@@ -193,94 +193,79 @@ header .navigation .nav-buttons {
 }
 
 /* banner */
-.banner-section {
+.banner {
   padding-top: 130px;
 }
-.banner-section .banner {
+.banner-wrapper {
   display: flex;
   gap: 100px;
 }
-.banner-section .banner .banner-text {
+.banner-text {
   margin-top: 90px;
   max-width: 550px;
 }
-.banner-section .banner .banner-text .banner-paragraph {
+.banner-text-paragraph {
   margin-top: 40px;
   max-width: 550px;
 }
-.banner-section .banner .banner-text .banner-button {
+.banner-text-button {
   margin-top: 60px;
 }
-.banner-section .banner .banner-image {
+.banner-image {
   width: 500px;
   max-width: 500px;
 }
 
 /* Benefits section */
-.benefits-section {
+.benefits {
   position: relative;
   bottom: 120px;
   box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
   border-radius: 10px;
   padding: 80px 20px 55px 20px;
 }
-.benefits-section .boxes {
+.benefits-cards-containers {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.benefits-section .boxes .box .box-img-container {
+.benefits-card-img-container {
   padding: 16px;
   background-color: rgba(31, 219, 132, 0.1);
   display: inline-block;
 }
-.benefits-section .boxes .box .box-title {
+.benefits-card-title {
   margin-top: 26px;
 }
-.benefits-section .boxes .box .box-h-line {
+.benefits-card-text {
+  margin-top: 20px;
+  max-width: 300px;
+}
+
+.h-line {
   width: 60px;
   height: 4px;
   border: none;
   margin-top: 28px;
-}
-.benefits-section .boxes .box .box-text {
-  margin-top: 20px;
-  max-width: 300px;
 }
 
 /* Pricing Section */
 .pricing {
   margin-top: 200px;
 }
-.pricing .time-selection {
+.pricing-time-selection {
   margin-top: 60px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.pricing .time-selection .monthly,
-.pricing .time-selection .yearly {
-  text-align: center;
-  padding: 20px 35px;
-  border: solid 1px #aefdd9;
-}
-.pricing .time-selection .monthly {
-  border-radius: 5px 0 0 5px;
-}
-.pricing .time-selection .yearly {
-  border-left: none;
-  border-radius: 0 5px 5px 0;
-  opacity: 0.7;
-  background-color: #d1fce9;
-}
-
-.cards {
+.pricing-cards-wrapper {
   margin-top: 65px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.cards .card {
+.pricing-card {
   height: 650px;
   display: flex;
   flex-direction: column;
@@ -290,16 +275,16 @@ header .navigation .nav-buttons {
   transition: all 0.1s ease-in;
   position: relative;
 }
-.cards .card .card-text:nth-child(1) {
+.pricing-card-text:nth-child(1) {
   margin-top: 30px;
 }
-.cards .card .pricing-benefit {
+.pricing-card-benefits {
   height: 300px;
 }
-.cards .card .pricing-benefit p {
+.pricing-card-benefits p {
   margin-top: 15px;
 }
-.cards .card::before {
+.pricing-card::before {
   content: "";
   width: 100%;
   height: 3px;
@@ -309,13 +294,31 @@ header .navigation .nav-buttons {
   left: 0;
   display: none;
 }
-.cards .card:hover::before {
+.pricing-card:hover::before {
   display: block;
 }
-.cards .card:nth-child(2) {
+.pricing-card:nth-child(2) {
   background-color: white;
   border-top: 3px solid #0a8aff;
   box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+}
+
+.monthly,
+.yearly {
+  text-align: center;
+  padding: 20px 35px;
+  border: solid 1px #aefdd9;
+}
+
+.monthly {
+  border-radius: 5px 0 0 5px;
+}
+
+.yearly {
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  opacity: 0.7;
+  background-color: #d1fce9;
 }
 
 /* Reviews */
@@ -327,26 +330,26 @@ header .navigation .nav-buttons {
   justify-content: space-between;
   overflow: hidden;
 }
-.reviews .review-left {
+.reviews-left {
   height: 400px;
   background-image: url("https://dl.dropboxusercontent.com/s/zlna0gj9kbjt83q/group-5.png?dl=0");
   background-repeat: no-repeat;
   background-size: contain;
   padding: 30px 0 0 20px;
 }
-.reviews .review-right {
+.reviews-right {
   width: 800px;
   height: 800px;
   position: relative;
 }
-.reviews .review-right .review-cards {
+.reviews-cards-wrapper {
   display: flex;
   gap: 40px;
   position: absolute;
   top: 200px;
   left: -100px;
 }
-.reviews .review-right .review-cards .review-card {
+.reviews-card {
   min-width: 300px;
   box-sizing: border-box;
   padding: 80px 60px 65px 50px;
@@ -357,13 +360,14 @@ header .navigation .nav-buttons {
   left: 0;
   transform: translateX(0);
 }
-.reviews .review-right .review-cards .review-card .review-card-text {
+.reviews-card-text {
   margin-top: 23px;
 }
-.reviews .review-right .review-cards .review-card .review-card-user {
+.reviews-card-user {
   margin-top: 46px;
 }
-.reviews .review-right .dots {
+
+.dots-wrapper {
   position: absolute;
   bottom: 80px;
   left: 80px;
@@ -371,7 +375,8 @@ header .navigation .nav-buttons {
   display: flex;
   gap: 30px;
 }
-.reviews .review-right .dots .dot {
+
+.dot {
   min-width: 20px;
   height: 20px;
   border: 3px solid white;
@@ -383,53 +388,46 @@ header .navigation .nav-buttons {
   margin-top: 200px;
   padding: 0 0 110px;
 }
-.footer .brand-logos {
+.footer-brand-logos {
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.footer .copyright {
+.footer-copyright {
   margin-top: 180px;
 }
-.footer .footer-nav {
+.footer-nav {
   margin-top: 50px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.footer .footer-nav a::after {
+.footer-nav a::after {
   content: "/";
   margin-left: 20px;
 }
-.footer .footer-nav a:last-child:after {
+.footer-nav a:last-child:after {
   content: "";
 }
 
 @media screen and (max-width: 800px) {
   /* header */
-  header .navigation {
+  .header-navigation {
     flex-direction: column;
   }
-  header .navigation .dropdownNavigation {
+  .header-dropdownNavigation {
     display: flex;
     justify-content: space-between;
   }
-  header .navigation .dropdownNavigation .logo {
+  .header-logo {
     font-size: 25px;
   }
-  header .navigation .dropdownNavigation .hamburger {
+  .header-hamburger {
+    font-size: 25px;
     display: block;
-    font-size: 25px;
   }
-  header .navigation nav .navbar {
-    margin-top: 60px;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-    display: none;
-  }
-  header .navigation .nav-buttons {
+  .header-navbar, .header-nav-buttons {
     margin-top: 60px;
     flex-direction: column;
     align-items: center;
@@ -440,43 +438,43 @@ header .navigation .nav-buttons {
     font-size: 24px;
   }
   /* banner */
-  .banner-section {
+  .banner {
     padding-top: 50px;
   }
-  .banner-section .banner {
+  .banner-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   /* Pricing */
-  .time-selection {
+  .pricing-time-selection {
     height: 100px;
     align-items: flex-start;
   }
-  .time-selection .monthly,
-.time-selection .yearly {
-    padding: 10px 22px;
-  }
-  .cards {
+  .pricing-cards-wrapper {
     gap: 40px;
   }
-  .cards .pricing-benefit p {
+  .pricing-card-benefit p {
     margin-top: 10px;
     margin-top: 20px;
+  }
+  .monthly,
+.yearly {
+    padding: 10px 22px;
   }
   /* Footer */
   .footer {
     margin-top: 100px;
   }
-  .footer .copyright {
+  .footer-copyright {
     margin-top: 100px;
   }
-  .footer .footer-nav {
+  .footer-nav {
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
-  .footer .footer-nav a::after {
+  .footer-nav a::after {
     content: "";
   }
 }
@@ -539,32 +537,32 @@ header .navigation .nav-buttons {
     box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
   }
   /* Header */
-  header .nav-buttons .register {
+  .register {
     padding: 10px 40px;
   }
   /* Banner */
-  .banner-section .banner .banner-text .banner-paragraph {
+  .banner-text-paragraph {
     margin-top: 20px;
     max-width: 300px;
   }
-  .banner-section .banner .banner-text .banner-button {
+  .banner-text-button {
     margin-top: 30px;
   }
-  .banner-section .banner .banner-image {
+  .banner-image {
     width: 350px;
     aspect-ratio: 1/1.5;
   }
   /* Benefits */
-  .benefits-section {
+  .benefits {
     position: static;
     box-shadow: 0 0 0 0 rgba(210, 210, 210, 0.5);
     border-radius: 10px;
   }
-  .benefits-section .boxes .box {
+  .benefits-card {
     margin: 30px 0;
   }
   /* Pricing */
-  .pricing .cards .card {
+  .pricing-card {
     height: 480px;
   }
   /* Reviews*/
@@ -577,20 +575,20 @@ header .navigation .nav-buttons {
     padding: 0;
     margin-top: 100px;
   }
-  .reviews .review-left {
+  .reviews-left {
     background: transparent;
     height: 50px;
   }
-  .reviews .review-left .review-left h2 {
+  .reviews-left h2 {
     font-size: 30px;
   }
-  .reviews .review-right {
+  .reviews-right {
     width: 100%;
     height: 100%;
     padding: 30px 0;
     background-color: transparent;
   }
-  .reviews .review-right .review-cards {
+  .reviews-cards-wrapper {
     display: flex;
     gap: 40px;
     position: relative;
@@ -598,27 +596,27 @@ header .navigation .nav-buttons {
     left: 0;
     padding: 0 30px;
   }
-  .reviews .review-right .review-cards .review-card {
+  .reviews-card {
     width: 300px;
     padding: 40px 30px 35px 30px;
   }
-  .reviews .review-right .dots {
+  .reviews .dots-wrapper {
     position: static;
     display: flex;
     justify-content: center;
   }
-  .reviews .review-right .dots .dot {
+  .reviews .dot {
     min-width: 20px;
     height: 20px;
     border: 3px solid black;
     border-radius: 50%;
   }
   /* Footer */
-  .footer .brand-logos {
+  .footer-brand-logos {
     flex-direction: column;
     gap: 60px;
   }
-  .footer .brand-logos img {
+  .footer-brand-logos img {
     width: 80px;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -6,11 +6,11 @@ const hamburger = document.getElementById("hamburger");
 const navIcon = document.getElementById("nav-icon");
 const elements = document.getElementsByClassName('nav-link');
 const bodyElement = document.getElementById('body');
-const pricingCard = document.getElementsByClassName("card");
-const cards = document.querySelectorAll(".review-card");
-const cardText = document.querySelectorAll('.review-card-text')
-const cardUserText = document.querySelectorAll('.review-card-user');
-const cardLogo = document.querySelectorAll('.review-card-logo');
+const pricingCard = document.getElementsByClassName("pricing-card");
+const cards = document.querySelectorAll(".reviews-card");
+const cardText = document.querySelectorAll('.reviews-card-text')
+const cardUserText = document.querySelectorAll('.reviews-card-user');
+const cardLogo = document.querySelectorAll('.reviews-card-logo');
 const dots = document.querySelectorAll('.dot');
 
 
