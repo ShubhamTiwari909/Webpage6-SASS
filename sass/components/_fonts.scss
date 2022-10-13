@@ -1,16 +1,16 @@
-@use "../abstracts/mixins";
+@use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-@include mixins.headings($Rubik, 48px, 1);
-@include mixins.headings($Rubik, 40px, 2);
+@include headings($Rubik, 48px, 1);
+@include headings($Rubik, 40px, 2);
 
-@include mixins.title($Rubik, 72px, xl);
-@include mixins.title($Rubik, 26px, 1);
-@include mixins.title($Rubik, 24px, 2);
+@include title($Rubik, 72px, xl);
+@include title($Rubik, 26px, 1);
+@include title($Rubik, 24px, 2);
 
-@include mixins.text($Rubik, 19px, lg);
-@include mixins.text($Rubik, 17px, md);
-@include mixins.text($Rubik, 15px, sm);
+@include text($Rubik, 19px, lg);
+@include text($Rubik, 17px, md);
+@include text($Rubik, 15px, sm);
 
 .line-height-2 {
   line-height: 2;
