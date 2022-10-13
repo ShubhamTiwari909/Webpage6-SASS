@@ -1,0 +1,95 @@
+@use "../abstracts/mixins" as *;
+
+@include mobileAndTablet {
+  /* header */
+  header {
+    .navigation {
+      flex-direction: column;
+
+      .dropdownNavigation {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+          font-size: 25px;
+        }
+
+        .hamburger {
+          display: block;
+          font-size: 25px;
+        }
+      }
+
+      nav {
+        .navbar {
+          margin-top: 60px;
+          flex-direction: column;
+          align-items: center;
+          gap: 35px;
+          display: none;
+        }
+      }
+      .nav-buttons {
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        display: none;
+      }
+    }
+  }
+
+  .nav-link {
+    font-size: 24px;
+  }
+
+  /* banner */
+  .banner-section {
+    padding-top: 50px;
+
+    .banner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* Pricing */
+  .time-selection {
+    height: 100px;
+    align-items: flex-start;
+
+    .monthly,
+    .yearly {
+      padding: 10px 22px;
+    }
+  }
+
+  .cards {
+    gap: 40px;
+
+    .pricing-benefit p {
+      margin-top: 10px;
+      margin-top: 20px;
+    }
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 100px;
+
+    .copyright {
+      margin-top: 100px;
+    }
+
+    .footer-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      a::after {
+        content: "";
+      }
+    }
+  }
+} ;

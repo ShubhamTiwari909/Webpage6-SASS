@@ -1,0 +1,141 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+@include desktop {
+  /* Headings, titles and text sizes */
+  @include headings($Rubik, 30px, 1);
+  @include headings($Rubik, 24px, 2);
+
+  @include title($Rubik, 40px, xl);
+  @include title($Rubik, 20px, 1);
+  @include title($Rubik, 18px, 2);
+
+  @include text($Rubik, 16px, lg);
+  @include text($Rubik, 14px, md);
+  @include text($Rubik, 13px, sm);
+
+  .line-height-2 {
+    line-height: 1.4;
+  }
+
+  @include buttons(6px 18px 5px 18px, 5px 0, sm);
+  @include buttons(14px 38px 13px, 10px 0, md);
+  @include buttons(15px 30px 15px, 10px 0, lg);
+
+  /* Header */
+  header {
+    .nav-buttons {
+      .register {
+        padding: 10px 40px;
+      }
+    }
+  }
+
+  /* Banner */
+  .banner-section {
+    .banner {
+      .banner-text {
+        .banner-paragraph {
+          margin-top: 20px;
+          max-width: 300px;
+        }
+        .banner-button {
+          margin-top: 30px;
+        }
+      }
+
+      .banner-image {
+        width: 350px;
+        aspect-ratio: 1/1.5;
+      }
+    }
+  }
+
+  /* Benefits */
+  .benefits-section {
+    position: static;
+    box-shadow: 0 0 0 0 rgba(210, 210, 210, 0.5);
+    border-radius: 10px;
+
+    .boxes {
+      .box {
+        margin: 30px 0;
+      }
+    }
+  }
+
+  /* Pricing */
+  .pricing {
+    .cards {
+      .card {
+        height: 480px;
+      }
+    }
+  }
+
+  /* Reviews*/
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+    margin-top: 100px;
+
+    .review-left {
+      background: transparent;
+      height: 50px;
+
+      .review-left h2 {
+        font-size: 30px;
+      }
+    }
+
+    .review-right {
+      width: 100%;
+      height: 100%;
+      padding: 30px 0;
+      background-color: transparent;
+
+      .review-cards {
+        display: flex;
+        gap: 40px;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 0 30px;
+
+        .review-card {
+          width: 300px;
+          padding: 40px 30px 35px 30px;
+        }
+      }
+
+      .dots {
+        position: static;
+        display: flex;
+        justify-content: center;
+
+        .dot {
+          min-width: 20px;
+          height: 20px;
+          border: 3px solid black;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  /* Footer */
+  .footer {
+    .brand-logos {
+      flex-direction: column;
+      gap: 60px;
+
+      img {
+        width: 80px;
+      }
+    }
+  }
+}

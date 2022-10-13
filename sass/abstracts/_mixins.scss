@@ -1,0 +1,50 @@
+@use "./variables" as *;
+
+//Buttons
+@mixin buttons($paddings: 0, $border-radius: 0, $prefix) {
+  .btn-#{$prefix} {
+    padding: $paddings;
+    border-radius: $border-radius;
+  }
+  .btn-#{$prefix}:hover {
+    box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+  }
+}
+
+// Fonts
+@mixin headings($font-family: "sans-sarif", $font-size: 16px, $prefix) {
+  .heading-#{$prefix} {
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+}
+
+@mixin title($font-family: "sans-sarif", $font-size: 16px, $prefix: "default") {
+  .title-#{$prefix} {
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+}
+
+@mixin text($font-family: "sans-sarif", $font-size: 16px, $prefix: "default") {
+  .text-#{$prefix} {
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+}
+
+// Media queries
+
+
+@mixin mobileAndTablet {
+  @media screen and (max-width: #{$phone-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+

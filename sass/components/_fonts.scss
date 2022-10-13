@@ -1,0 +1,25 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables" as *;
+
+@include mixins.headings($Rubik, 48px, 1);
+@include mixins.headings($Rubik, 40px, 2);
+
+@include mixins.title($Rubik, 72px, xl);
+@include mixins.title($Rubik, 26px, 1);
+@include mixins.title($Rubik, 24px, 2);
+
+@include mixins.text($Rubik, 19px, lg);
+@include mixins.text($Rubik, 17px, md);
+@include mixins.text($Rubik, 15px, sm);
+
+.line-height-2 {
+  line-height: 2;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-center{
+  text-align: center;
+}

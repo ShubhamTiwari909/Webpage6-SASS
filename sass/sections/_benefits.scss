@@ -1,0 +1,35 @@
+/* Benefits section */
+.benefits-section {
+  position: relative;
+  bottom: 120px;
+  box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+  border-radius: 10px;
+  padding: 80px 20px 55px 20px;
+
+  .boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .box {
+      .box-img-container {
+        padding: 16px;
+        background-color: rgba(31, 219, 132, 0.1);
+        display: inline-block;
+      }
+      .box-title {
+        margin-top: 26px;
+      }
+      .box-h-line {
+        width: 60px;
+        height: 4px;
+        border: none;
+        margin-top: 28px;
+      }
+      .box-text {
+        margin-top: 20px;
+        max-width: 300px;
+      }
+    }
+  }
+}

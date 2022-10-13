@@ -1,0 +1,31 @@
+/* Footer */
+.footer {
+  margin-top: 200px;
+  padding: 0 0 110px;
+
+  .brand-logos {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .copyright {
+    margin-top: 180px;
+  }
+
+  .footer-nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a::after {
+      content: "/";
+      margin-left: 20px;
+    }
+    a:last-child:after {
+      content: "";
+    }
+  }
+}

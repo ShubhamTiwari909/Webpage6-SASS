@@ -1,0 +1,24 @@
+// core
+@use "./core/reset.scss";
+
+// components
+@use "./components/buttons.scss";
+@use "./components/fonts.scss";
+@use "./components/colors.scss";
+@use "./components/containers.scss";
+
+// layout
+@use "./layout/header.scss";
+
+// sections
+@use "./sections/banner.scss";
+@use "./sections/benefits.scss";
+@use "./sections/pricing.scss";
+@use "./sections/review.scss";
+
+// layout
+@use "./layout/footer.scss";
+
+// media queries
+@use "./media/media-mobile.scss";
+@use "./media/media-desktop.scss";

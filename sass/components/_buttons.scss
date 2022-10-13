@@ -1,0 +1,8 @@
+@use "../abstracts/mixins";
+
+
+// Buttons
+@include mixins.buttons(8px 24px 7px 24px,5px 0,sm);
+@include mixins.buttons(20px 46px 18px,10px 0,md);
+@include mixins.buttons(22px 46px 22px,10px 0,lg);
+

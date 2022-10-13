@@ -1,0 +1,80 @@
+/* Pricing Section */
+.pricing {
+  margin-top: 200px;
+
+  .time-selection {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .monthly,
+    .yearly {
+      text-align: center;
+      padding: 20px 35px;
+      border: solid 1px #aefdd9;
+    }
+
+    .monthly {
+      border-radius: 5px 0 0 5px;
+    }
+
+    .yearly {
+      border-left: none;
+      border-radius: 0 5px 5px 0;
+      opacity: 0.7;
+      background-color: #d1fce9;
+    }
+  }
+}
+
+.cards {
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .card {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 56px 60px;
+    transition: all 0.1s ease-in;
+    position: relative;
+
+    .card-text:nth-child(1) {
+      margin-top: 30px;
+    }
+
+    .pricing-benefit {
+      height: 300px;
+
+      p {
+        margin-top: 15px;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: #0a8aff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    &:hover::before {
+      display: block;
+    }
+
+    &:nth-child(2) {
+      background-color: white;
+      border-top: 3px solid #0a8aff;
+      box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+    }
+  }
+}

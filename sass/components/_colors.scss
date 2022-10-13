@@ -1,0 +1,32 @@
+@use "../abstracts/mixins" as *;
+
+$textcolors: (
+  "white": #fff,
+  "marine": #031d5b,
+  "slateblue": #5b6c94,
+  "darkpurple": #32325c,
+  "green": #1fdb84,
+  "lightgreen": #6fdeaa,
+  "lightgrey": #f8f9fc,
+);
+
+$bgcolors: (
+  "white": #fff,
+  "darkgreyblue": #313a5a,
+  "green": #1fdb84,
+  "lightgrey": #f8f9fc,
+);
+
+
+@each $name,$color in $textcolors {
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+@each $name,$bgcolor in $bgcolors {
+    .bg-#{$name} {
+      background-color: $bgcolor;
+    }
+  }
+  

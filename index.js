@@ -189,7 +189,7 @@ window.addEventListener('resize', changingMediaQuery, slider);
 let scrolledNavigation = () => {
     "use strict";
     if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
-        header.style.height = "50px";
+        header.style.height = "70px";
         header.style.top = "0";
         header.style.padding = "20px 0 0";
         header.style.backgroundColor = "#1fdb84";
